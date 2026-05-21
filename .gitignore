@@ -1,0 +1,26 @@
+# Root-level .gitignore for The Council
+
+# ── Internal planning docs ─────────────────────────────────────
+the-council-implementation-plan.md
+# Prevents secrets and build artifacts from being committed
+
+# ── Backend secrets ────────────────────────────────────────────
+backend/.env
+backend/__pycache__/
+backend/.venv/
+*.pyc
+*.pyo
+
+# ── Frontend build artifacts ───────────────────────────────────
+frontend/.env.local
+frontend/.env*.local
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
+frontend/*.tsbuildinfo
+
+# ── OS junk ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
