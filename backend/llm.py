@@ -11,11 +11,11 @@ from typing import AsyncGenerator
 
 DEV_MODE = os.getenv("DEV_MODE", "false").lower() == "true"
 
-# Model cascade order — Opus first (highest quality), Sonnet, Haiku
+# Model cascade order — Sonnet primary (cost-optimised), Haiku fallback
 MODELS = (
     ["claude-haiku-4-5-20251001"]
     if DEV_MODE else
-    ["claude-opus-4-6", "claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
+    ["claude-sonnet-4-6", "claude-haiku-4-5-20251001"]
 )
 
 
